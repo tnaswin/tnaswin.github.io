@@ -62,7 +62,7 @@
 									<li><span>Date of Birth</span>Sep 13, 1994</li>
 									<li><span>Address</span>Ernakulam, Kerala, IN</li>
 									<li><span>E-mail</span>tnaswin94@gmail.com</li>
-									<li><span>Phone </span>+91 9159866455</li>
+									<li><span>Phone </span>+91-9159866455</li>
 								</ul>
 							</div>
 						</div>
@@ -112,6 +112,8 @@
 							<h2><span>Sep.</span>2019 - <span>Jul.</span>2020</h2>
 							<h3>Krish Offshore Sources Pvt Ltd.</h3>
 							<h4>Senior Web Developer</h4>
+							<button class="collapsible">Achievements/ Tasks/ Projects</button>
+							<div class="content-collapse">
 							<p>
 								- Developed a Data Analysis tool to retrieve and store SERP data. 
 								  Achieved this using Python,BeautifulSoup and Pandas and communication was established using Django REST API.<br>
@@ -128,11 +130,14 @@
 								- Used programming capabilities in PHP, SQL and JavaScript and other libraries as needed.<br>
 								- Developed database objects, including tables, views and materialized views using SQL.
 							</p>
+							</div>							
 						</li>
 						<li>
 							<h2><span>Aug.</span>2018 - <span>Jul.</span>2019</h2>
 							<h3>Lintel Technologies Pvt. Ltd.</h3>
 							<h4>Junior Software Engineer</h4>
+							<button class="collapsible">Achievements/ Tasks/ Projects</button>
+							<div class="content-collapse">
 							<p>
 								- Worked independently to design, develop and test code and hosted apps on cloud platforms such as AWS and Heroku.<br>
 								- Developed SIP/VoIP Calling applications in FreeSWITCH server using Python and Twisted Framework.<br>
@@ -148,11 +153,14 @@
 								- Worked with the client in an agile environment to track issues in development; 
 								  conducting reviews of codes & test cases and analyzing change requests / enhancements.
 							</p>
+							</div>
 						</li>
 						<li>
 							<h2><span>Apr.</span>2015 - <span>May.</span>2016</h2>
 							<h3>Future Beyond</h3>
 							<h4>Web Developer</h4>
+							<button class="collapsible">Achievements/ Tasks/ Projects</button>
+							<div class="content-collapse">
 							<p>
 								- Created eye catching and functional digital design concepts across various platforms to strengthen company brand and identity.<br>
 								- Tested websites and performed troubleshooting prior to deployment.<br>
@@ -167,6 +175,7 @@
 								- Created site layout and user interface using HTML and CSS practices.<br>
 								- Converted mockups into HTML, JavaScript, AJAX and JSON.
 							</p>
+							</div>
 						</li>
 					</ul>
 				</div>
@@ -340,6 +349,22 @@
 	<script src="js/magnific-popup.min.js"></script>
 	<script src="js/circle-progress.min.js"></script>
 	<script src="js/main.js"></script>
+	<script>
+		var coll = document.getElementsByClassName("collapsible");
+		var i;
+
+		for (i = 0; i < coll.length; i++) {
+		coll[i].addEventListener("click", function() {
+			this.classList.toggle("active");
+			var content = this.nextElementSibling;
+			if (content.style.maxHeight){
+			content.style.maxHeight = null;
+			} else {
+			content.style.maxHeight = content.scrollHeight + "px";
+			} 
+		});
+		}
+	</script>
 
 </body>
 </html>
